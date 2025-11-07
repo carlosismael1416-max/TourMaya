@@ -1,0 +1,17 @@
+using UnityEngine;
+using System.Collections;
+public class MovRotacion : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+    public float velocidadRotacion = 50f; // grados por segundo
+
+    void Update()
+    {
+        // Mantiene el hacha vertical y la hace girar continuamente sobre Y
+        transform.rotation = Quaternion.Euler(90f, Time.time * velocidadRotacion, 0f);
+    }
+}
